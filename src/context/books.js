@@ -11,9 +11,7 @@ function Provider({ children }) {
   //   setBooks(response.data);
   // }, []);
   const fetchBooks = useCallback(async () => {
-    const response = await axios.get(
-      'https://books-alpha-flame.vercel.app/books'
-    );
+    const response = await axios.get('/books');
     setBooks(response.data);
   }, []);
 
